@@ -1,0 +1,3 @@
+/home/astra/project/gaja/build/CMakeFiles/gaja.dir
+/home/astra/project/gaja/build/CMakeFiles/edit_cache.dir
+/home/astra/project/gaja/build/CMakeFiles/rebuild_cache.dir

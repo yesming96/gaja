@@ -1,0 +1,18 @@
+---
+Language: Cpp
+BasedOnStyle: Google
+ColumnLimit: 120
+IndentWidth: 2
+IndentAccessModifiers: false
+AccessModifierOffset: -2
+BreakBeforeBraces: Custom
+BraceWrapping:
+  # AfterClass: false
+  AfterFunction: false
+  AfterEnum: false
+  # AfterNamespace: false
+AllowShortFunctionsOnASingleLine: None
+DerivePointerAlignment: false
+PointerAlignment: Left
+AllowShortEnumsOnASingleLine: false
+...

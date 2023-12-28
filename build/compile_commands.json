@@ -1,0 +1,47 @@
+[
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/main.cpp.o -c /home/astra/project/gaja/main.cpp",
+  "file": "/home/astra/project/gaja/main.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/data/yaml_handler.cpp.o -c /home/astra/project/gaja/src/data/yaml_handler.cpp",
+  "file": "/home/astra/project/gaja/src/data/yaml_handler.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/module/global_path_planning/global_path_planning_interface.cpp.o -c /home/astra/project/gaja/src/module/global_path_planning/global_path_planning_interface.cpp",
+  "file": "/home/astra/project/gaja/src/module/global_path_planning/global_path_planning_interface.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/module/navigation.cpp.o -c /home/astra/project/gaja/src/module/navigation.cpp",
+  "file": "/home/astra/project/gaja/src/module/navigation.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/module/system_model/bicycle.cpp.o -c /home/astra/project/gaja/src/module/system_model/bicycle.cpp",
+  "file": "/home/astra/project/gaja/src/module/system_model/bicycle.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/module/system_model/system_model.cpp.o -c /home/astra/project/gaja/src/module/system_model/system_model.cpp",
+  "file": "/home/astra/project/gaja/src/module/system_model/system_model.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/module/test.cpp.o -c /home/astra/project/gaja/src/module/test.cpp",
+  "file": "/home/astra/project/gaja/src/module/test.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/type/road.cpp.o -c /home/astra/project/gaja/src/type/road.cpp",
+  "file": "/home/astra/project/gaja/src/type/road.cpp"
+},
+{
+  "directory": "/home/astra/project/gaja/build",
+  "command": "/usr/bin/g++  -I/home/astra/project/gaja/include -I/home/astra/project/gaja/external -Wall -Wextra -Wpedantic -g -std=gnu++17 -o CMakeFiles/gaja.dir/src/type/time.cpp.o -c /home/astra/project/gaja/src/type/time.cpp",
+  "file": "/home/astra/project/gaja/src/type/time.cpp"
+}
+]
