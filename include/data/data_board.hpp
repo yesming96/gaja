@@ -47,6 +47,7 @@ public:
   }
 
   BicycleModelParameter get_bicycle_model_param() {
+    std::shared_lock<std::shared_mutex> rlock(bicycle_model_param_mutex_);
     return bicycle_model_;
   }
 
@@ -63,6 +64,7 @@ private:
   mutable std::shared_mutex data_mutex;
   mutable std::shared_mutex test_mutex;
 
+  mutable std::shared_mutex bicycle_model_param_mutex_;
   BicycleModelParameter bicycle_model_;
 };
 }  // namespace gaja

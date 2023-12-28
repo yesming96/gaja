@@ -1,5 +1,5 @@
 /**
- * @file velocity.hpp
+ * @file control_input.hpp
  * @author Eunmin Hwang (yesming.em@gmail.com)
  * @brief
  * @date 2023-12-28
@@ -12,15 +12,15 @@
 #include <vector>
 
 namespace gaja {
-class Velocity {
+class ControlInput {
 public:
-  Velocity() = default;
-  Velocity(double vel_x, double vel_y) {
+  ControlInput() = default;
+  ControlInput(double vel_x, double vel_y) {
     vel_x_ = vel_x;
     vel_y_ = vel_y;
   }
 
-  ~Velocity() = default;
+  ~ControlInput() = default;
 
   double vel_x_{0.};
   double vel_y_{0.};

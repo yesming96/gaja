@@ -13,6 +13,9 @@
 #include <mutex>
 #include <shared_mutex>
 
+#include "../type/control_input.hpp"
+#include "../type/pose.hpp"
+
 namespace gaja {
 class StateBoard {
 public:
@@ -25,39 +28,35 @@ public:
   StateBoard(const StateBoard&) = delete;
   StateBoard& operator=(const StateBoard&) = delete;
 
-
-  void set_data(int val) {
-    std::unique_lock<std::shared_mutex> wlock(data_mutex);
-    data_ = val;
+  void set_pose(const Pose& pose) {
+    std::unique_lock<std::shared_mutex> wlock(pose_mutex_);
+    current_pose_ = pose;
   }
 
-  int get_data() {
-    std::shared_lock<std::shared_mutex> rlock(data_mutex);
-    return data_;
+  Pose get_pose() {
+    std::shared_lock<std::shared_mutex> rlock(pose_mutex_);
+    return current_pose_;
   }
 
-  void set_test(int val) {
-    std::unique_lock<std::shared_mutex> wlock(test_mutex);
-    test_ = val;
+  void set_control_inputs(const std::vector<ControlInput>& control_inputs) {
+    std::unique_lock<std::shared_mutex> wlock(control_inputs_mutex_);
+    control_inputs_ = control_inputs;
   }
 
-  int get_test() {
-    std::shared_lock<std::shared_mutex> rlock(test_mutex);
-    return test_;
+  std::vector<ControlInput> get_control_inputs() {
+    std::shared_lock<std::shared_mutex> rlock(control_inputs_mutex_);
+    return control_inputs_;
   }
 
 private:
   StateBoard() {
   }
 
-  // datas
-  int data_{0};
-  double test_{0.0};
-
   // mutexes
-  mutable std::shared_mutex data_mutex;
-  mutable std::shared_mutex test_mutex;
+  mutable std::shared_mutex pose_mutex_;
+  mutable std::shared_mutex control_inputs_mutex_;
 
-  
+  Pose current_pose_;
+  std::vector<ControlInput> control_inputs_;
 };
 }  // namespace gaja

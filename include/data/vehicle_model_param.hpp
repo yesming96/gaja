@@ -32,5 +32,9 @@ public:
   double d_f = 1.35;
   double d_r = 1.5;
   double d_s = 0.8;
+
+  double acc_limit = 9.26;       // [m/s^2]
+  double brake_limit = -6;       // [m/s^2]
+  double brake_emergency = -10;  // [m/s^2]
 };
 }  // namespace gaja
