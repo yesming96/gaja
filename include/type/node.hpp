@@ -14,7 +14,7 @@ namespace gaja {
 class Node {
 public:
   Node() = delete;
-  Node(int id, );
+  Node(int id);
   ~Node() = default;
 
 private:

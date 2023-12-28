@@ -19,6 +19,8 @@ bool Bicycle::init() {
   set_status(Status::INIT);
   double velocity = 0.0;
   bicycle_model_param_ = data_board_.get_bicycle_model_param();
+
+  
   // A_ = Eigen::Matrix4d::Zero(4, 4);
   // A_(1, 3) = 1;
   // A_(2, 2) = (bicycle_model_param_.c_f + bicycle_model_param_.c_r) / (bicycle_model_param_.mass * velocity);

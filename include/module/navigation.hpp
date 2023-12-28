@@ -15,7 +15,6 @@
 #include <shared_mutex>
 
 #include "../data/data_board.hpp"
-#include "../type/time.hpp"
 #include "../utility/log.hpp"
 #include "global_path_planning/global_path_planning_interface.hpp"
 #include "local_path_planning/local_path_planning_interface.hpp"

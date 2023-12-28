@@ -1,5 +1,5 @@
 /**
- * @file vehicle_model.hpp
+ * @file vehicle_model_param.hpp
  * @author Eunmin Hwang (yesming.em@gmail.com)
  * @brief
  * @date 2023-10-15

@@ -21,7 +21,6 @@
 #include <utility>
 
 #include "../base.hpp"
-#include "../type/time.hpp"
 namespace gaja {
 class Thread {
 public:
