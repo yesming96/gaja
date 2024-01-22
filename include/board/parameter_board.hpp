@@ -10,8 +10,13 @@
  */
 #pragma once
 
+#include <yaml-cpp/yaml.h>
+
+#include <fstream>
+#include <iostream>
 #include <mutex>
 #include <shared_mutex>
+#include <string>
 
 #include "vehicle_model_param.hpp"
 namespace gaja {
@@ -26,6 +31,26 @@ public:
   ParameterBoard(const ParameterBoard&) = delete;
   ParameterBoard& operator=(const ParameterBoard&) = delete;
 
+  void load_file(const std::string& path) {
+    try {
+      std::unique_lock<std::shared_mutex> wlock(whole_data_mutex);
+
+      std::ifstream yaml_file;
+
+      yaml_file.open(path);
+
+      if (yaml_file.is_open()) {
+        std::stringstream ss;
+        ss << yaml_file.rdbuf();
+
+        YAML::Node param_content_ = YAML::Load(ss.str());
+        bool loaded_ = true;
+
+      } else {
+      }
+    } catch (YAML::Exception& e) {
+    }
+  }
   void set_data(int val) {
     std::unique_lock<std::shared_mutex> wlock(data_mutex);
     data_ = val;
@@ -61,6 +86,7 @@ private:
 
   // mutexes
   // TODO: template으로 mutex의 lock unlock이 자동으로 되도록 ...?
+  mutable std::shared_mutex whole_data_mutex;
   mutable std::shared_mutex data_mutex;
   mutable std::shared_mutex test_mutex;
 
