@@ -32,7 +32,7 @@ void YamlHandler::load_data() {
 }
 
 void YamlHandler::update_data() {
-  DataBoard& db = DataBoard::get_instance();
+  ParameterBoard& db = ParameterBoard::get_instance();
   if (config_["test"]) {
     db.set_test(config_["test"].as<double>());
   }

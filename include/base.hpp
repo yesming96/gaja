@@ -28,4 +28,6 @@ inline std::atomic_bool program_running_{true};
 inline void exit() {
   program_running_ = false;
 };
+using namespace std::chrono_literals;
+
 }  // namespace gaja

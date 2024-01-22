@@ -15,14 +15,18 @@ namespace gaja {
 class ControlInput {
 public:
   ControlInput() = default;
-  ControlInput(double vel_x, double vel_y) {
-    vel_x_ = vel_x;
-    vel_y_ = vel_y;
+  ControlInput(double vel_x, double vel_y, double acceleration, double steer_angle) {
+    this->vel_x = vel_x;
+    this->vel_y = vel_y;
+    this->acceleration = acceleration;
+    this->steer_angle = steer_angle;
   }
 
   ~ControlInput() = default;
 
-  double vel_x_{0.};
-  double vel_y_{0.};
+  double vel_x{0.};
+  double vel_y{0.};
+  double acceleration{0.};
+  double steer_angle{0.};
 };
 }  // namespace gaja

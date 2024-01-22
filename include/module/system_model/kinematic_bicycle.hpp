@@ -9,27 +9,32 @@
  */
 #pragma once
 
+#include <algorithm>
+#include <cmath>
 #include <mutex>
 #include <shared_mutex>
 
 #include "../../../external/Eigen/Core"
-#include "../../data/data_board.hpp"
+#include "../../board/parameter_board.hpp"
+#include "../../board/state_board.hpp"
+#include "../../type/control_input.hpp"
 #include "../../type/stopwatch.hpp"
 #include "../../utility/log.hpp"
 #include "../../utility/thread.hpp"
 #include "system_model_interface.hpp"
 
 namespace gaja {
-class Bicycle : public SystemModelInterface {
+class KinematicBicycle : public SystemModelInterface {
 public:
-  Bicycle() = default;
-  ~Bicycle() = default;
+  KinematicBicycle() = default;
+  ~KinematicBicycle() = default;
 
-  bool init();
-  void run();
-  void pause();
-  void exit();
-  void show_current_time();
+  virtual bool init() final;
+  virtual void run() final;
+  virtual void pause() final;
+  virtual void resume() final;
+  virtual void exit() final;
+  virtual void show_current_time() final;
 
   void set_status(const Status& status);
   Status get_status();
@@ -43,12 +48,24 @@ private:
   bool is_pause();
   Thread system_;
 
+  // time step
+  std::chrono::milliseconds time_step_ = 10ms;  // ms
+
   std::shared_mutex status_mutex_;
   Status status_ = Status::NONE;
-  DataBoard data_board_;
+
+  ParameterBoard parameter_board_;
+  StateBoard state_board_;
   BicycleModelParameter bicycle_model_param_;
 
-  Eigen::Vector4d state_;
-  Eigen::Matrix4d A_;
+  // model parameters
+  double wheel_base_ = 0.;
+  double max_steer_angle_;
+  double max_velocity_;
+
+  // model state
+  double vx_{0.};
+  double vy_{0.};
+  double yaw{0.};
 };
 }  // namespace gaja

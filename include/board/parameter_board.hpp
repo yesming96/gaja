@@ -15,16 +15,16 @@
 
 #include "vehicle_model_param.hpp"
 namespace gaja {
-class DataBoard {
+class ParameterBoard {
 public:
-  static DataBoard& get_instance() {
-    static DataBoard instance;
+  static ParameterBoard& get_instance() {
+    static ParameterBoard instance;
     return instance;
   }
 
   // delete copy and substitute
-  DataBoard(const DataBoard&) = delete;
-  DataBoard& operator=(const DataBoard&) = delete;
+  ParameterBoard(const ParameterBoard&) = delete;
+  ParameterBoard& operator=(const ParameterBoard&) = delete;
 
   void set_data(int val) {
     std::unique_lock<std::shared_mutex> wlock(data_mutex);
@@ -52,7 +52,7 @@ public:
   }
 
 private:
-  DataBoard() {
+  ParameterBoard() {
   }
 
   // datas

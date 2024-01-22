@@ -28,7 +28,7 @@ public:
 
   enum class Status {
     NONE = 0,
-    INIT = 1,
+    IDLE = 1,
     RUN = 2,
     PAUSE = 3,
     STOP = 4,
@@ -37,6 +37,7 @@ public:
   virtual bool init() = 0;
   virtual void run() = 0;
   virtual void pause() = 0;
+  virtual void resume() = 0;
   virtual void exit() = 0;
   virtual void show_current_time() = 0;
 

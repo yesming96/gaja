@@ -22,7 +22,7 @@
 #include "../../external/spdlog/spdlog.h"
 #include "../utility/log.hpp"
 #include "../utility/thread.hpp"
-#include "data_board.hpp"
+#include "parameter_board.hpp"
 
 namespace gaja {
 class YamlHandler {

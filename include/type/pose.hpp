@@ -16,14 +16,14 @@ class Pose {
 public:
   Pose() = default;
   Pose(double x, double y, double yaw) {
-    x_ = x;
-    y_ = y;
-    yaw_ = yaw;
+    this->x = x;
+    this->y = y;
+    this->yaw = yaw;
   };
   ~Pose() = default;
 
-  double x_{0.};
-  double y_{0.};
-  double yaw_{0.};
+  double x{0.};
+  double y{0.};
+  double yaw{0.};
 };
 }  // namespace gaja

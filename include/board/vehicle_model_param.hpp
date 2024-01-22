@@ -19,8 +19,8 @@ public:
   double c_r = -87594;  // [N/rad]
 
   // distances from the CoG to the front and rear axles
-  double a = 1.25;  // [m]
-  double b = 1.32;  // [m]
+  double l_f = 1.25;  // [m]
+  double l_r = 1.32;  // [m]
 
   // moment of inertia around z axis
   double i_z = 3411.52;  // [kg m^2]
@@ -36,5 +36,8 @@ public:
   double acc_limit = 9.26;       // [m/s^2]
   double brake_limit = -6;       // [m/s^2]
   double brake_emergency = -10;  // [m/s^2]
+
+  double max_steer_angle = 45;  // [rad]
+  double max_velocity = 30;     // [m/s]
 };
 }  // namespace gaja

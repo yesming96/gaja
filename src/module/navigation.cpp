@@ -39,16 +39,16 @@ void Navigation::run() {
 
 void Navigation::system_model() {
   spdlog::info("system model is running");
-  DataBoard::get_instance().set_data(10);
-  int data = DataBoard::get_instance().get_data();
+  ParameterBoard::get_instance().set_data(10);
+  int data = ParameterBoard::get_instance().get_data();
   spdlog::info("data: {}", data);
 }
 
 void Navigation::system_model2() {
   spdlog::info("system model is running2");
-  DataBoard::get_instance().set_data(20);
+  ParameterBoard::get_instance().set_data(20);
 
-  int data = DataBoard::get_instance().get_data();
+  int data = ParameterBoard::get_instance().get_data();
   spdlog::info("data 2: {}", data);
 }
 }  // namespace gaja

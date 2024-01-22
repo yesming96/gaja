@@ -102,4 +102,5 @@ private:
   std::atomic<bool> pause_;
   std::unique_ptr<std::thread> worker_;
 };
+
 }  // namespace gaja
